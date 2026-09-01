@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="个人作品集 PDF 展示" />
+<title>作品集 | Portfolio</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- 背景动效 -->
+<div class="bg-fx">
+  <div class="grid"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+</div>
+
+<!-- 导航 -->
+<header id="header">
+  <div class="container nav">
+    <a href="index.html#hero" class="logo"><img src="img/Nabar/myid.jpg" alt="微信头像" class="wx-avatar" /><span class="wx-name">可可汪</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#about">关于我</a>
+      <a href="portfolio.html" class="nav-active">作品集</a>
+      <a href="index.html#experience">经历</a>
+      <a href="index.html#contact" class="nav-cta">联系我</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- 作品集展示 -->
+<section class="portfolio-page">
+  <div class="container">
+    <div class="portfolio-head">
+      <span class="hi-tag"><span class="pulse"></span> 作品集</span>
+      <h1>我的<span class="grad">作品合集</span></h1>
+      <p class="portfolio-sub">涵盖电商设计、视觉创意、品牌运营等方向，持续更新中。</p>
+    </div>
+
+    <div class="portfolio-viewer">
+      <div class="viewer-toolbar">
+        <div class="toolbar-left">
+          <a href="index.html" class="btn btn-back" title="返回首页">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            返回首页
+          </a>
+          <span class="viewer-title">📄 作品集.pdf</span>
+        </div>
+        <div class="toolbar-right">
+          <button class="btn btn-icon btn-fullscreen" id="btnFullscreen" title="全屏查看">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            <span class="btn-icon-text">全屏</span>
+          </button>
+          <a href="pdf/2026作品集.pdf" download data-file="pdf/2026作品集.pdf" data-name="2026作品集.pdf" class="btn btn-primary btn-download">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            下载 PDF
+          </a>
+        </div>
+      </div>
+      <div class="iframe-wrap" id="pdfWrap">
+        <iframe
+          id="pdfFrame"
+          src="pdf/2026作品集.pdf"
+          title="作品集 PDF"
+          frameborder="0"
+        ></iframe>
+      </div>
+      <p class="viewer-hint">如果 PDF 未显示，请确认 <code>pdf/2026作品集.pdf</code> 文件路径正确，或直接点击上方"下载 PDF"按钮。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 全屏遮罩 -->
+<div class="fs-overlay" id="fsOverlay">
+  <div class="fs-toolbar">
+    <button class="btn btn-back btn-fs-close" id="btnFsClose" title="退出全屏">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      退出全屏
+    </button>
+    <span class="viewer-title">📄 作品集.pdf · 全屏预览</span>
+    <a href="pdf/2026作品集.pdf" download data-file="pdf/2026作品集.pdf" data-name="2026作品集.pdf" class="btn btn-primary btn-download btn-download--fs">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      下载
+    </a>
+  </div>
+  <div class="fs-iframe-wrap">
+    <iframe
+      id="pdfFrameFs"
+      src="pdf/2026作品集.pdf"
+      title="作品集 PDF 全屏"
+      frameborder="0"
+    ></iframe>
+  </div>
+</div>
+
+<!-- 返回顶部 -->
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script src="js/script.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/download.js"></script>
+</body>
+</html>

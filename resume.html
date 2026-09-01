@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="个人简历查看与下载" />
+<title>简历 | Resume</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- 背景动效 -->
+<div class="bg-fx">
+  <div class="grid"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+</div>
+
+<!-- 导航 -->
+<header id="header">
+  <div class="container nav">
+    <a href="index.html#hero" class="logo"><img src="img/Nabar/myid.jpg" alt="微信头像" class="wx-avatar" /><span class="wx-name">可可汪</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#about">关于我</a>
+      <a href="portfolio.html">作品集</a>
+      <a href="index.html#experience">经历</a>
+      <a href="resume.html" class="nav-cta nav-active">查看简历</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- 简历展示 -->
+<section class="portfolio-page resume-page">
+  <div class="container">
+    <div class="portfolio-head">
+      <span class="hi-tag"><span class="pulse"></span> Resume</span>
+      <h1>个人<span class="grad">简历</span></h1>
+      <p class="portfolio-sub">在这里可以在线预览我的简历，也可以点击按钮下载保存。</p>
+    </div>
+
+    <div class="portfolio-viewer">
+      <div class="viewer-toolbar">
+        <div class="toolbar-left">
+          <a href="index.html" class="btn btn-back" title="返回首页">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            返回首页
+          </a>
+          <span class="viewer-title">📄 沈君贵 简 历.pdf</span>
+        </div>
+        <div class="toolbar-right">
+          <a href="pdf/沈君贵 简 历.pdf" download data-file="pdf/沈君贵 简 历.pdf" data-name="沈君贵简历.pdf" class="btn btn-primary btn-download">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            下载简历
+          </a>
+        </div>
+      </div>
+      <div class="iframe-wrap iframe-wrap--resume">
+        <iframe
+          src="pdf/沈君贵 简 历.pdf"
+          title="个人简历 PDF"
+          frameborder="0"
+        ></iframe>
+      </div>
+      <p class="viewer-hint">如果简历未显示，请确认 <code>pdf/沈君贵 简 历.pdf</code> 文件路径正确，或直接点击上方"下载简历"按钮。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 返回顶部 -->
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script src="js/script.js"></script>
+<script src="js/download.js"></script>
+</body>
+</html>
